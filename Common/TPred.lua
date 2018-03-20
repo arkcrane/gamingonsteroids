@@ -108,7 +108,6 @@ function TPred:GetCurrentWayPoints(object)
 	local result = {}
 	if object.pathing.hasMovePath then
 		table.insert(result, Vector(object.pos.x,object.pos.y, object.pos.z))
-		for i = object.pathing.pathIndex, object.pathing.pathCount do
 			path = object:GetPath(i)
 			table.insert(result, Vector(path.x, path.y, path.z))
 		end
